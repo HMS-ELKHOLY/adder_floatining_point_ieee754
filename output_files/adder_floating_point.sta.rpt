@@ -1,0 +1,696 @@
+TimeQuest Timing Analyzer report for adder_floating_point
+Thu Apr 04 13:55:17 2019
+Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Propagation Delay
+ 12. Minimum Propagation Delay
+ 13. Fast Model Setup Summary
+ 14. Fast Model Hold Summary
+ 15. Fast Model Recovery Summary
+ 16. Fast Model Removal Summary
+ 17. Fast Model Minimum Pulse Width Summary
+ 18. Propagation Delay
+ 19. Minimum Propagation Delay
+ 20. Multicorner Timing Analysis Summary
+ 21. Progagation Delay
+ 22. Minimum Progagation Delay
+ 23. Clock Transfers
+ 24. Report TCCS
+ 25. Report RSKM
+ 26. Unconstrained Paths
+ 27. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                     ;
++--------------------+--------------------------------------------------+
+; Quartus II Version ; Version 12.1 Build 177 11/07/2012 SJ Web Edition ;
+; Revision Name      ; adder_floating_point                             ;
+; Device Family      ; Cyclone II                                       ;
+; Device Name        ; EP2C35F672C6                                     ;
+; Timing Models      ; Final                                            ;
+; Delay Model        ; Combined                                         ;
+; Rise/Fall Delays   ; Unavailable                                      ;
++--------------------+--------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
+----------
+; Clocks ;
+----------
+No clocks to report.
+
+
+---------------------------
+; Slow Model Fmax Summary ;
+---------------------------
+No paths to report.
+
+
+----------------------------
+; Slow Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Slow Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Slow Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------------------------------------+
+; Propagation Delay                                                                     ;
++-------------------------------+-------------------+--------+--------+--------+--------+
+; Input Port                    ; Output Port       ; RR     ; RF     ; FR     ; FF     ;
++-------------------------------+-------------------+--------+--------+--------+--------+
+; operand_normalized_ieee_a[0]  ; carry_of_fraction ; 16.910 ; 16.910 ; 16.910 ; 16.910 ;
+; operand_normalized_ieee_a[1]  ; carry_of_fraction ; 17.909 ; 17.909 ; 17.909 ; 17.909 ;
+; operand_normalized_ieee_a[2]  ; carry_of_fraction ; 18.170 ; 18.170 ; 18.170 ; 18.170 ;
+; operand_normalized_ieee_a[3]  ; carry_of_fraction ; 18.981 ; 18.981 ; 18.981 ; 18.981 ;
+; operand_normalized_ieee_a[4]  ; carry_of_fraction ; 19.035 ; 19.035 ; 19.035 ; 19.035 ;
+; operand_normalized_ieee_a[5]  ; carry_of_fraction ; 18.826 ; 18.826 ; 18.826 ; 18.826 ;
+; operand_normalized_ieee_a[6]  ; carry_of_fraction ; 18.673 ; 18.673 ; 18.673 ; 18.673 ;
+; operand_normalized_ieee_a[7]  ; carry_of_fraction ; 18.768 ; 18.768 ; 18.768 ; 18.768 ;
+; operand_normalized_ieee_a[8]  ; carry_of_fraction ; 17.895 ; 17.895 ; 17.895 ; 17.895 ;
+; operand_normalized_ieee_a[9]  ; carry_of_fraction ; 18.170 ; 18.170 ; 18.170 ; 18.170 ;
+; operand_normalized_ieee_a[10] ; carry_of_fraction ; 19.253 ; 19.253 ; 19.253 ; 19.253 ;
+; operand_normalized_ieee_a[11] ; carry_of_fraction ; 18.811 ; 18.811 ; 18.811 ; 18.811 ;
+; operand_normalized_ieee_a[12] ; carry_of_fraction ; 19.439 ; 19.439 ; 19.439 ; 19.439 ;
+; operand_normalized_ieee_a[13] ; carry_of_fraction ; 19.230 ; 19.230 ; 19.230 ; 19.230 ;
+; operand_normalized_ieee_a[14] ; carry_of_fraction ; 18.811 ; 18.811 ; 18.811 ; 18.811 ;
+; operand_normalized_ieee_a[15] ; carry_of_fraction ; 19.010 ; 19.010 ; 19.010 ; 19.010 ;
+; operand_normalized_ieee_a[16] ; carry_of_fraction ; 18.395 ; 18.395 ; 18.395 ; 18.395 ;
+; operand_normalized_ieee_a[17] ; carry_of_fraction ; 18.485 ; 18.485 ; 18.485 ; 18.485 ;
+; operand_normalized_ieee_a[18] ; carry_of_fraction ; 18.499 ; 18.499 ; 18.499 ; 18.499 ;
+; operand_normalized_ieee_a[19] ; carry_of_fraction ; 18.466 ; 18.466 ; 18.466 ; 18.466 ;
+; operand_normalized_ieee_a[20] ; carry_of_fraction ; 18.790 ; 18.790 ; 18.790 ; 18.790 ;
+; operand_normalized_ieee_a[21] ; carry_of_fraction ; 18.767 ; 18.767 ; 18.767 ; 18.767 ;
+; operand_normalized_ieee_a[22] ; carry_of_fraction ; 18.275 ; 18.275 ; 18.275 ; 18.275 ;
+; operand_normalized_ieee_a[23] ; carry_of_fraction ; 23.281 ; 23.281 ; 23.281 ; 23.281 ;
+; operand_normalized_ieee_a[24] ; carry_of_fraction ; 23.140 ; 23.140 ; 23.140 ; 23.140 ;
+; operand_normalized_ieee_a[25] ; carry_of_fraction ; 23.381 ; 23.381 ; 23.381 ; 23.381 ;
+; operand_normalized_ieee_a[26] ; carry_of_fraction ; 23.186 ; 23.186 ; 23.186 ; 23.186 ;
+; operand_normalized_ieee_a[27] ; carry_of_fraction ; 23.010 ; 23.010 ; 23.010 ; 23.010 ;
+; operand_normalized_ieee_a[28] ; carry_of_fraction ; 23.188 ; 23.188 ; 23.188 ; 23.188 ;
+; operand_normalized_ieee_a[29] ; carry_of_fraction ; 22.983 ; 22.983 ; 22.983 ; 22.983 ;
+; operand_normalized_ieee_a[30] ; carry_of_fraction ; 21.909 ; 21.909 ; 21.909 ; 21.909 ;
+; operand_normalized_ieee_a[31] ; carry_of_fraction ; 13.758 ; 13.758 ; 13.758 ; 13.758 ;
+; operand_normalized_ieee_b[0]  ; carry_of_fraction ; 17.625 ; 17.625 ; 17.625 ; 17.625 ;
+; operand_normalized_ieee_b[1]  ; carry_of_fraction ; 17.372 ; 17.372 ; 17.372 ; 17.372 ;
+; operand_normalized_ieee_b[2]  ; carry_of_fraction ; 17.027 ; 17.027 ; 17.027 ; 17.027 ;
+; operand_normalized_ieee_b[3]  ; carry_of_fraction ; 17.969 ; 17.969 ; 17.969 ; 17.969 ;
+; operand_normalized_ieee_b[4]  ; carry_of_fraction ; 18.243 ; 18.243 ; 18.243 ; 18.243 ;
+; operand_normalized_ieee_b[5]  ; carry_of_fraction ; 17.901 ; 17.901 ; 17.901 ; 17.901 ;
+; operand_normalized_ieee_b[6]  ; carry_of_fraction ; 17.965 ; 17.965 ; 17.965 ; 17.965 ;
+; operand_normalized_ieee_b[7]  ; carry_of_fraction ; 19.618 ; 19.618 ; 19.618 ; 19.618 ;
+; operand_normalized_ieee_b[8]  ; carry_of_fraction ; 18.681 ; 18.681 ; 18.681 ; 18.681 ;
+; operand_normalized_ieee_b[9]  ; carry_of_fraction ; 18.518 ; 18.518 ; 18.518 ; 18.518 ;
+; operand_normalized_ieee_b[10] ; carry_of_fraction ; 18.828 ; 18.828 ; 18.828 ; 18.828 ;
+; operand_normalized_ieee_b[11] ; carry_of_fraction ; 18.934 ; 18.934 ; 18.934 ; 18.934 ;
+; operand_normalized_ieee_b[12] ; carry_of_fraction ; 18.629 ; 18.629 ; 18.629 ; 18.629 ;
+; operand_normalized_ieee_b[13] ; carry_of_fraction ; 19.099 ; 19.099 ; 19.099 ; 19.099 ;
+; operand_normalized_ieee_b[14] ; carry_of_fraction ; 18.495 ; 18.495 ; 18.495 ; 18.495 ;
+; operand_normalized_ieee_b[15] ; carry_of_fraction ; 19.705 ; 19.705 ; 19.705 ; 19.705 ;
+; operand_normalized_ieee_b[16] ; carry_of_fraction ; 19.643 ; 19.643 ; 19.643 ; 19.643 ;
+; operand_normalized_ieee_b[17] ; carry_of_fraction ; 19.455 ; 19.455 ; 19.455 ; 19.455 ;
+; operand_normalized_ieee_b[18] ; carry_of_fraction ; 19.332 ; 19.332 ; 19.332 ; 19.332 ;
+; operand_normalized_ieee_b[19] ; carry_of_fraction ; 19.012 ; 19.012 ; 19.012 ; 19.012 ;
+; operand_normalized_ieee_b[20] ; carry_of_fraction ; 18.437 ; 18.437 ; 18.437 ; 18.437 ;
+; operand_normalized_ieee_b[21] ; carry_of_fraction ; 18.443 ; 18.443 ; 18.443 ; 18.443 ;
+; operand_normalized_ieee_b[22] ; carry_of_fraction ; 19.591 ; 19.591 ; 19.591 ; 19.591 ;
+; operand_normalized_ieee_b[23] ; carry_of_fraction ; 22.747 ; 22.747 ; 22.747 ; 22.747 ;
+; operand_normalized_ieee_b[24] ; carry_of_fraction ; 23.299 ; 23.299 ; 23.299 ; 23.299 ;
+; operand_normalized_ieee_b[25] ; carry_of_fraction ; 22.602 ; 22.602 ; 22.602 ; 22.602 ;
+; operand_normalized_ieee_b[26] ; carry_of_fraction ; 22.764 ; 22.764 ; 22.764 ; 22.764 ;
+; operand_normalized_ieee_b[27] ; carry_of_fraction ; 22.984 ; 22.984 ; 22.984 ; 22.984 ;
+; operand_normalized_ieee_b[28] ; carry_of_fraction ; 22.958 ; 22.958 ; 22.958 ; 22.958 ;
+; operand_normalized_ieee_b[29] ; carry_of_fraction ; 22.349 ; 22.349 ; 22.349 ; 22.349 ;
+; operand_normalized_ieee_b[30] ; carry_of_fraction ; 22.497 ; 22.497 ; 22.497 ; 22.497 ;
+; operand_normalized_ieee_b[31] ; carry_of_fraction ; 15.179 ; 15.179 ; 15.179 ; 15.179 ;
++-------------------------------+-------------------+--------+--------+--------+--------+
+
+
++---------------------------------------------------------------------------------------+
+; Minimum Propagation Delay                                                             ;
++-------------------------------+-------------------+--------+--------+--------+--------+
+; Input Port                    ; Output Port       ; RR     ; RF     ; FR     ; FF     ;
++-------------------------------+-------------------+--------+--------+--------+--------+
+; operand_normalized_ieee_a[0]  ; carry_of_fraction ; 13.878 ; 13.878 ; 13.878 ; 13.878 ;
+; operand_normalized_ieee_a[1]  ; carry_of_fraction ; 14.682 ; 14.682 ; 14.682 ; 14.682 ;
+; operand_normalized_ieee_a[2]  ; carry_of_fraction ; 14.473 ; 14.473 ; 14.473 ; 14.473 ;
+; operand_normalized_ieee_a[3]  ; carry_of_fraction ; 14.144 ; 14.144 ; 14.144 ; 14.144 ;
+; operand_normalized_ieee_a[4]  ; carry_of_fraction ; 14.399 ; 14.399 ; 14.399 ; 14.399 ;
+; operand_normalized_ieee_a[5]  ; carry_of_fraction ; 14.231 ; 14.231 ; 14.231 ; 14.231 ;
+; operand_normalized_ieee_a[6]  ; carry_of_fraction ; 13.844 ; 13.844 ; 13.844 ; 13.844 ;
+; operand_normalized_ieee_a[7]  ; carry_of_fraction ; 14.032 ; 14.032 ; 14.032 ; 14.032 ;
+; operand_normalized_ieee_a[8]  ; carry_of_fraction ; 13.223 ; 13.223 ; 13.223 ; 13.223 ;
+; operand_normalized_ieee_a[9]  ; carry_of_fraction ; 13.130 ; 13.130 ; 13.130 ; 13.130 ;
+; operand_normalized_ieee_a[10] ; carry_of_fraction ; 14.201 ; 14.201 ; 14.201 ; 14.201 ;
+; operand_normalized_ieee_a[11] ; carry_of_fraction ; 12.981 ; 12.981 ; 12.981 ; 12.981 ;
+; operand_normalized_ieee_a[12] ; carry_of_fraction ; 14.402 ; 14.402 ; 14.402 ; 14.402 ;
+; operand_normalized_ieee_a[13] ; carry_of_fraction ; 13.780 ; 13.780 ; 13.780 ; 13.780 ;
+; operand_normalized_ieee_a[14] ; carry_of_fraction ; 13.682 ; 13.682 ; 13.682 ; 13.682 ;
+; operand_normalized_ieee_a[15] ; carry_of_fraction ; 13.411 ; 13.411 ; 13.411 ; 13.411 ;
+; operand_normalized_ieee_a[16] ; carry_of_fraction ; 12.857 ; 12.857 ; 12.857 ; 12.857 ;
+; operand_normalized_ieee_a[17] ; carry_of_fraction ; 12.808 ; 12.808 ; 12.808 ; 12.808 ;
+; operand_normalized_ieee_a[18] ; carry_of_fraction ; 13.161 ; 13.161 ; 13.161 ; 13.161 ;
+; operand_normalized_ieee_a[19] ; carry_of_fraction ; 12.629 ; 12.629 ; 12.629 ; 12.629 ;
+; operand_normalized_ieee_a[20] ; carry_of_fraction ; 13.320 ; 13.320 ; 13.320 ; 13.320 ;
+; operand_normalized_ieee_a[21] ; carry_of_fraction ; 12.920 ; 12.920 ; 12.920 ; 12.920 ;
+; operand_normalized_ieee_a[22] ; carry_of_fraction ; 12.838 ; 12.838 ; 12.838 ; 12.838 ;
+; operand_normalized_ieee_a[23] ; carry_of_fraction ; 12.836 ; 12.836 ; 12.836 ; 12.836 ;
+; operand_normalized_ieee_a[24] ; carry_of_fraction ; 12.695 ; 12.695 ; 12.695 ; 12.695 ;
+; operand_normalized_ieee_a[25] ; carry_of_fraction ; 12.936 ; 12.936 ; 12.936 ; 12.936 ;
+; operand_normalized_ieee_a[26] ; carry_of_fraction ; 12.741 ; 12.741 ; 12.741 ; 12.741 ;
+; operand_normalized_ieee_a[27] ; carry_of_fraction ; 12.565 ; 12.565 ; 12.565 ; 12.565 ;
+; operand_normalized_ieee_a[28] ; carry_of_fraction ; 12.743 ; 12.743 ; 12.743 ; 12.743 ;
+; operand_normalized_ieee_a[29] ; carry_of_fraction ; 12.538 ; 12.538 ; 12.538 ; 12.538 ;
+; operand_normalized_ieee_a[30] ; carry_of_fraction ; 11.464 ; 11.464 ; 11.464 ; 11.464 ;
+; operand_normalized_ieee_a[31] ; carry_of_fraction ; 7.758  ; 7.758  ; 7.758  ; 7.758  ;
+; operand_normalized_ieee_b[0]  ; carry_of_fraction ; 14.007 ; 14.007 ; 14.007 ; 14.007 ;
+; operand_normalized_ieee_b[1]  ; carry_of_fraction ; 14.152 ; 14.152 ; 14.152 ; 14.152 ;
+; operand_normalized_ieee_b[2]  ; carry_of_fraction ; 14.114 ; 14.114 ; 14.114 ; 14.114 ;
+; operand_normalized_ieee_b[3]  ; carry_of_fraction ; 14.205 ; 14.205 ; 14.205 ; 14.205 ;
+; operand_normalized_ieee_b[4]  ; carry_of_fraction ; 13.910 ; 13.910 ; 13.910 ; 13.910 ;
+; operand_normalized_ieee_b[5]  ; carry_of_fraction ; 14.040 ; 14.040 ; 14.040 ; 14.040 ;
+; operand_normalized_ieee_b[6]  ; carry_of_fraction ; 14.199 ; 14.199 ; 14.199 ; 14.199 ;
+; operand_normalized_ieee_b[7]  ; carry_of_fraction ; 14.114 ; 14.114 ; 14.114 ; 14.114 ;
+; operand_normalized_ieee_b[8]  ; carry_of_fraction ; 13.824 ; 13.824 ; 13.824 ; 13.824 ;
+; operand_normalized_ieee_b[9]  ; carry_of_fraction ; 13.033 ; 13.033 ; 13.033 ; 13.033 ;
+; operand_normalized_ieee_b[10] ; carry_of_fraction ; 13.433 ; 13.433 ; 13.433 ; 13.433 ;
+; operand_normalized_ieee_b[11] ; carry_of_fraction ; 13.955 ; 13.955 ; 13.955 ; 13.955 ;
+; operand_normalized_ieee_b[12] ; carry_of_fraction ; 13.109 ; 13.109 ; 13.109 ; 13.109 ;
+; operand_normalized_ieee_b[13] ; carry_of_fraction ; 12.966 ; 12.966 ; 12.966 ; 12.966 ;
+; operand_normalized_ieee_b[14] ; carry_of_fraction ; 12.875 ; 12.875 ; 12.875 ; 12.875 ;
+; operand_normalized_ieee_b[15] ; carry_of_fraction ; 13.305 ; 13.305 ; 13.305 ; 13.305 ;
+; operand_normalized_ieee_b[16] ; carry_of_fraction ; 14.073 ; 14.073 ; 14.073 ; 14.073 ;
+; operand_normalized_ieee_b[17] ; carry_of_fraction ; 13.432 ; 13.432 ; 13.432 ; 13.432 ;
+; operand_normalized_ieee_b[18] ; carry_of_fraction ; 13.384 ; 13.384 ; 13.384 ; 13.384 ;
+; operand_normalized_ieee_b[19] ; carry_of_fraction ; 13.253 ; 13.253 ; 13.253 ; 13.253 ;
+; operand_normalized_ieee_b[20] ; carry_of_fraction ; 12.961 ; 12.961 ; 12.961 ; 12.961 ;
+; operand_normalized_ieee_b[21] ; carry_of_fraction ; 12.254 ; 12.254 ; 12.254 ; 12.254 ;
+; operand_normalized_ieee_b[22] ; carry_of_fraction ; 12.427 ; 12.427 ; 12.427 ; 12.427 ;
+; operand_normalized_ieee_b[23] ; carry_of_fraction ; 12.302 ; 12.302 ; 12.302 ; 12.302 ;
+; operand_normalized_ieee_b[24] ; carry_of_fraction ; 12.854 ; 12.854 ; 12.854 ; 12.854 ;
+; operand_normalized_ieee_b[25] ; carry_of_fraction ; 12.157 ; 12.157 ; 12.157 ; 12.157 ;
+; operand_normalized_ieee_b[26] ; carry_of_fraction ; 12.319 ; 12.319 ; 12.319 ; 12.319 ;
+; operand_normalized_ieee_b[27] ; carry_of_fraction ; 12.539 ; 12.539 ; 12.539 ; 12.539 ;
+; operand_normalized_ieee_b[28] ; carry_of_fraction ; 12.513 ; 12.513 ; 12.513 ; 12.513 ;
+; operand_normalized_ieee_b[29] ; carry_of_fraction ; 11.904 ; 11.904 ; 11.904 ; 11.904 ;
+; operand_normalized_ieee_b[30] ; carry_of_fraction ; 12.052 ; 12.052 ; 12.052 ; 12.052 ;
+; operand_normalized_ieee_b[31] ; carry_of_fraction ; 8.315  ; 8.315  ; 8.315  ; 8.315  ;
++-------------------------------+-------------------+--------+--------+--------+--------+
+
+
+----------------------------
+; Fast Model Setup Summary ;
+----------------------------
+No paths to report.
+
+
+---------------------------
+; Fast Model Hold Summary ;
+---------------------------
+No paths to report.
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
+------------------------------------------
+; Fast Model Minimum Pulse Width Summary ;
+------------------------------------------
+No paths to report.
+
+
++---------------------------------------------------------------------------------------+
+; Propagation Delay                                                                     ;
++-------------------------------+-------------------+--------+--------+--------+--------+
+; Input Port                    ; Output Port       ; RR     ; RF     ; FR     ; FF     ;
++-------------------------------+-------------------+--------+--------+--------+--------+
+; operand_normalized_ieee_a[0]  ; carry_of_fraction ; 8.684  ; 8.684  ; 8.684  ; 8.684  ;
+; operand_normalized_ieee_a[1]  ; carry_of_fraction ; 9.169  ; 9.169  ; 9.169  ; 9.169  ;
+; operand_normalized_ieee_a[2]  ; carry_of_fraction ; 9.282  ; 9.282  ; 9.282  ; 9.282  ;
+; operand_normalized_ieee_a[3]  ; carry_of_fraction ; 9.569  ; 9.569  ; 9.569  ; 9.569  ;
+; operand_normalized_ieee_a[4]  ; carry_of_fraction ; 9.647  ; 9.647  ; 9.647  ; 9.647  ;
+; operand_normalized_ieee_a[5]  ; carry_of_fraction ; 9.526  ; 9.526  ; 9.526  ; 9.526  ;
+; operand_normalized_ieee_a[6]  ; carry_of_fraction ; 9.445  ; 9.445  ; 9.445  ; 9.445  ;
+; operand_normalized_ieee_a[7]  ; carry_of_fraction ; 9.554  ; 9.554  ; 9.554  ; 9.554  ;
+; operand_normalized_ieee_a[8]  ; carry_of_fraction ; 9.118  ; 9.118  ; 9.118  ; 9.118  ;
+; operand_normalized_ieee_a[9]  ; carry_of_fraction ; 9.173  ; 9.173  ; 9.173  ; 9.173  ;
+; operand_normalized_ieee_a[10] ; carry_of_fraction ; 9.790  ; 9.790  ; 9.790  ; 9.790  ;
+; operand_normalized_ieee_a[11] ; carry_of_fraction ; 9.511  ; 9.511  ; 9.511  ; 9.511  ;
+; operand_normalized_ieee_a[12] ; carry_of_fraction ; 9.816  ; 9.816  ; 9.816  ; 9.816  ;
+; operand_normalized_ieee_a[13] ; carry_of_fraction ; 9.738  ; 9.738  ; 9.738  ; 9.738  ;
+; operand_normalized_ieee_a[14] ; carry_of_fraction ; 9.536  ; 9.536  ; 9.536  ; 9.536  ;
+; operand_normalized_ieee_a[15] ; carry_of_fraction ; 9.655  ; 9.655  ; 9.655  ; 9.655  ;
+; operand_normalized_ieee_a[16] ; carry_of_fraction ; 9.348  ; 9.348  ; 9.348  ; 9.348  ;
+; operand_normalized_ieee_a[17] ; carry_of_fraction ; 9.378  ; 9.378  ; 9.378  ; 9.378  ;
+; operand_normalized_ieee_a[18] ; carry_of_fraction ; 9.308  ; 9.308  ; 9.308  ; 9.308  ;
+; operand_normalized_ieee_a[19] ; carry_of_fraction ; 9.305  ; 9.305  ; 9.305  ; 9.305  ;
+; operand_normalized_ieee_a[20] ; carry_of_fraction ; 9.445  ; 9.445  ; 9.445  ; 9.445  ;
+; operand_normalized_ieee_a[21] ; carry_of_fraction ; 9.426  ; 9.426  ; 9.426  ; 9.426  ;
+; operand_normalized_ieee_a[22] ; carry_of_fraction ; 9.280  ; 9.280  ; 9.280  ; 9.280  ;
+; operand_normalized_ieee_a[23] ; carry_of_fraction ; 11.551 ; 11.551 ; 11.551 ; 11.551 ;
+; operand_normalized_ieee_a[24] ; carry_of_fraction ; 11.451 ; 11.451 ; 11.451 ; 11.451 ;
+; operand_normalized_ieee_a[25] ; carry_of_fraction ; 11.628 ; 11.628 ; 11.628 ; 11.628 ;
+; operand_normalized_ieee_a[26] ; carry_of_fraction ; 11.516 ; 11.516 ; 11.516 ; 11.516 ;
+; operand_normalized_ieee_a[27] ; carry_of_fraction ; 11.387 ; 11.387 ; 11.387 ; 11.387 ;
+; operand_normalized_ieee_a[28] ; carry_of_fraction ; 11.557 ; 11.557 ; 11.557 ; 11.557 ;
+; operand_normalized_ieee_a[29] ; carry_of_fraction ; 11.423 ; 11.423 ; 11.423 ; 11.423 ;
+; operand_normalized_ieee_a[30] ; carry_of_fraction ; 10.923 ; 10.923 ; 10.923 ; 10.923 ;
+; operand_normalized_ieee_a[31] ; carry_of_fraction ; 6.682  ; 6.682  ; 6.682  ; 6.682  ;
+; operand_normalized_ieee_b[0]  ; carry_of_fraction ; 9.025  ; 9.025  ; 9.025  ; 9.025  ;
+; operand_normalized_ieee_b[1]  ; carry_of_fraction ; 8.864  ; 8.864  ; 8.864  ; 8.864  ;
+; operand_normalized_ieee_b[2]  ; carry_of_fraction ; 8.722  ; 8.722  ; 8.722  ; 8.722  ;
+; operand_normalized_ieee_b[3]  ; carry_of_fraction ; 9.140  ; 9.140  ; 9.140  ; 9.140  ;
+; operand_normalized_ieee_b[4]  ; carry_of_fraction ; 9.231  ; 9.231  ; 9.231  ; 9.231  ;
+; operand_normalized_ieee_b[5]  ; carry_of_fraction ; 9.094  ; 9.094  ; 9.094  ; 9.094  ;
+; operand_normalized_ieee_b[6]  ; carry_of_fraction ; 9.123  ; 9.123  ; 9.123  ; 9.123  ;
+; operand_normalized_ieee_b[7]  ; carry_of_fraction ; 9.835  ; 9.835  ; 9.835  ; 9.835  ;
+; operand_normalized_ieee_b[8]  ; carry_of_fraction ; 9.432  ; 9.432  ; 9.432  ; 9.432  ;
+; operand_normalized_ieee_b[9]  ; carry_of_fraction ; 9.368  ; 9.368  ; 9.368  ; 9.368  ;
+; operand_normalized_ieee_b[10] ; carry_of_fraction ; 9.515  ; 9.515  ; 9.515  ; 9.515  ;
+; operand_normalized_ieee_b[11] ; carry_of_fraction ; 9.621  ; 9.621  ; 9.621  ; 9.621  ;
+; operand_normalized_ieee_b[12] ; carry_of_fraction ; 9.438  ; 9.438  ; 9.438  ; 9.438  ;
+; operand_normalized_ieee_b[13] ; carry_of_fraction ; 9.643  ; 9.643  ; 9.643  ; 9.643  ;
+; operand_normalized_ieee_b[14] ; carry_of_fraction ; 9.379  ; 9.379  ; 9.379  ; 9.379  ;
+; operand_normalized_ieee_b[15] ; carry_of_fraction ; 9.916  ; 9.916  ; 9.916  ; 9.916  ;
+; operand_normalized_ieee_b[16] ; carry_of_fraction ; 9.931  ; 9.931  ; 9.931  ; 9.931  ;
+; operand_normalized_ieee_b[17] ; carry_of_fraction ; 9.830  ; 9.830  ; 9.830  ; 9.830  ;
+; operand_normalized_ieee_b[18] ; carry_of_fraction ; 9.772  ; 9.772  ; 9.772  ; 9.772  ;
+; operand_normalized_ieee_b[19] ; carry_of_fraction ; 9.607  ; 9.607  ; 9.607  ; 9.607  ;
+; operand_normalized_ieee_b[20] ; carry_of_fraction ; 9.330  ; 9.330  ; 9.330  ; 9.330  ;
+; operand_normalized_ieee_b[21] ; carry_of_fraction ; 9.336  ; 9.336  ; 9.336  ; 9.336  ;
+; operand_normalized_ieee_b[22] ; carry_of_fraction ; 9.916  ; 9.916  ; 9.916  ; 9.916  ;
+; operand_normalized_ieee_b[23] ; carry_of_fraction ; 11.258 ; 11.258 ; 11.258 ; 11.258 ;
+; operand_normalized_ieee_b[24] ; carry_of_fraction ; 11.585 ; 11.585 ; 11.585 ; 11.585 ;
+; operand_normalized_ieee_b[25] ; carry_of_fraction ; 11.204 ; 11.204 ; 11.204 ; 11.204 ;
+; operand_normalized_ieee_b[26] ; carry_of_fraction ; 11.269 ; 11.269 ; 11.269 ; 11.269 ;
+; operand_normalized_ieee_b[27] ; carry_of_fraction ; 11.384 ; 11.384 ; 11.384 ; 11.384 ;
+; operand_normalized_ieee_b[28] ; carry_of_fraction ; 11.384 ; 11.384 ; 11.384 ; 11.384 ;
+; operand_normalized_ieee_b[29] ; carry_of_fraction ; 11.061 ; 11.061 ; 11.061 ; 11.061 ;
+; operand_normalized_ieee_b[30] ; carry_of_fraction ; 11.210 ; 11.210 ; 11.210 ; 11.210 ;
+; operand_normalized_ieee_b[31] ; carry_of_fraction ; 7.340  ; 7.340  ; 7.340  ; 7.340  ;
++-------------------------------+-------------------+--------+--------+--------+--------+
+
+
++-----------------------------------------------------------------------------------+
+; Minimum Propagation Delay                                                         ;
++-------------------------------+-------------------+-------+-------+-------+-------+
+; Input Port                    ; Output Port       ; RR    ; RF    ; FR    ; FF    ;
++-------------------------------+-------------------+-------+-------+-------+-------+
+; operand_normalized_ieee_a[0]  ; carry_of_fraction ; 7.394 ; 7.394 ; 7.394 ; 7.394 ;
+; operand_normalized_ieee_a[1]  ; carry_of_fraction ; 7.774 ; 7.774 ; 7.774 ; 7.774 ;
+; operand_normalized_ieee_a[2]  ; carry_of_fraction ; 7.696 ; 7.696 ; 7.696 ; 7.696 ;
+; operand_normalized_ieee_a[3]  ; carry_of_fraction ; 7.490 ; 7.490 ; 7.490 ; 7.490 ;
+; operand_normalized_ieee_a[4]  ; carry_of_fraction ; 7.640 ; 7.640 ; 7.640 ; 7.640 ;
+; operand_normalized_ieee_a[5]  ; carry_of_fraction ; 7.520 ; 7.520 ; 7.520 ; 7.520 ;
+; operand_normalized_ieee_a[6]  ; carry_of_fraction ; 7.328 ; 7.328 ; 7.328 ; 7.328 ;
+; operand_normalized_ieee_a[7]  ; carry_of_fraction ; 7.471 ; 7.471 ; 7.471 ; 7.471 ;
+; operand_normalized_ieee_a[8]  ; carry_of_fraction ; 7.055 ; 7.055 ; 7.055 ; 7.055 ;
+; operand_normalized_ieee_a[9]  ; carry_of_fraction ; 7.000 ; 7.000 ; 7.000 ; 7.000 ;
+; operand_normalized_ieee_a[10] ; carry_of_fraction ; 7.535 ; 7.535 ; 7.535 ; 7.535 ;
+; operand_normalized_ieee_a[11] ; carry_of_fraction ; 6.926 ; 6.926 ; 6.926 ; 6.926 ;
+; operand_normalized_ieee_a[12] ; carry_of_fraction ; 7.560 ; 7.560 ; 7.560 ; 7.560 ;
+; operand_normalized_ieee_a[13] ; carry_of_fraction ; 7.288 ; 7.288 ; 7.288 ; 7.288 ;
+; operand_normalized_ieee_a[14] ; carry_of_fraction ; 7.202 ; 7.202 ; 7.202 ; 7.202 ;
+; operand_normalized_ieee_a[15] ; carry_of_fraction ; 7.126 ; 7.126 ; 7.126 ; 7.126 ;
+; operand_normalized_ieee_a[16] ; carry_of_fraction ; 6.846 ; 6.846 ; 6.846 ; 6.846 ;
+; operand_normalized_ieee_a[17] ; carry_of_fraction ; 6.808 ; 6.808 ; 6.808 ; 6.808 ;
+; operand_normalized_ieee_a[18] ; carry_of_fraction ; 6.967 ; 6.967 ; 6.967 ; 6.967 ;
+; operand_normalized_ieee_a[19] ; carry_of_fraction ; 6.730 ; 6.730 ; 6.730 ; 6.730 ;
+; operand_normalized_ieee_a[20] ; carry_of_fraction ; 7.035 ; 7.035 ; 7.035 ; 7.035 ;
+; operand_normalized_ieee_a[21] ; carry_of_fraction ; 6.829 ; 6.829 ; 6.829 ; 6.829 ;
+; operand_normalized_ieee_a[22] ; carry_of_fraction ; 6.810 ; 6.810 ; 6.810 ; 6.810 ;
+; operand_normalized_ieee_a[23] ; carry_of_fraction ; 6.865 ; 6.865 ; 6.865 ; 6.865 ;
+; operand_normalized_ieee_a[24] ; carry_of_fraction ; 6.765 ; 6.765 ; 6.765 ; 6.765 ;
+; operand_normalized_ieee_a[25] ; carry_of_fraction ; 6.942 ; 6.942 ; 6.942 ; 6.942 ;
+; operand_normalized_ieee_a[26] ; carry_of_fraction ; 6.830 ; 6.830 ; 6.830 ; 6.830 ;
+; operand_normalized_ieee_a[27] ; carry_of_fraction ; 6.701 ; 6.701 ; 6.701 ; 6.701 ;
+; operand_normalized_ieee_a[28] ; carry_of_fraction ; 6.871 ; 6.871 ; 6.871 ; 6.871 ;
+; operand_normalized_ieee_a[29] ; carry_of_fraction ; 6.737 ; 6.737 ; 6.737 ; 6.737 ;
+; operand_normalized_ieee_a[30] ; carry_of_fraction ; 6.237 ; 6.237 ; 6.237 ; 6.237 ;
+; operand_normalized_ieee_a[31] ; carry_of_fraction ; 3.942 ; 3.942 ; 3.942 ; 3.942 ;
+; operand_normalized_ieee_b[0]  ; carry_of_fraction ; 7.449 ; 7.449 ; 7.449 ; 7.449 ;
+; operand_normalized_ieee_b[1]  ; carry_of_fraction ; 7.494 ; 7.494 ; 7.494 ; 7.494 ;
+; operand_normalized_ieee_b[2]  ; carry_of_fraction ; 7.486 ; 7.486 ; 7.486 ; 7.486 ;
+; operand_normalized_ieee_b[3]  ; carry_of_fraction ; 7.527 ; 7.527 ; 7.527 ; 7.527 ;
+; operand_normalized_ieee_b[4]  ; carry_of_fraction ; 7.363 ; 7.363 ; 7.363 ; 7.363 ;
+; operand_normalized_ieee_b[5]  ; carry_of_fraction ; 7.469 ; 7.469 ; 7.469 ; 7.469 ;
+; operand_normalized_ieee_b[6]  ; carry_of_fraction ; 7.479 ; 7.479 ; 7.479 ; 7.479 ;
+; operand_normalized_ieee_b[7]  ; carry_of_fraction ; 7.451 ; 7.451 ; 7.451 ; 7.451 ;
+; operand_normalized_ieee_b[8]  ; carry_of_fraction ; 7.330 ; 7.330 ; 7.330 ; 7.330 ;
+; operand_normalized_ieee_b[9]  ; carry_of_fraction ; 6.972 ; 6.972 ; 6.972 ; 6.972 ;
+; operand_normalized_ieee_b[10] ; carry_of_fraction ; 7.133 ; 7.133 ; 7.133 ; 7.133 ;
+; operand_normalized_ieee_b[11] ; carry_of_fraction ; 7.411 ; 7.411 ; 7.411 ; 7.411 ;
+; operand_normalized_ieee_b[12] ; carry_of_fraction ; 6.976 ; 6.976 ; 6.976 ; 6.976 ;
+; operand_normalized_ieee_b[13] ; carry_of_fraction ; 6.911 ; 6.911 ; 6.911 ; 6.911 ;
+; operand_normalized_ieee_b[14] ; carry_of_fraction ; 6.862 ; 6.862 ; 6.862 ; 6.862 ;
+; operand_normalized_ieee_b[15] ; carry_of_fraction ; 7.062 ; 7.062 ; 7.062 ; 7.062 ;
+; operand_normalized_ieee_b[16] ; carry_of_fraction ; 7.433 ; 7.433 ; 7.433 ; 7.433 ;
+; operand_normalized_ieee_b[17] ; carry_of_fraction ; 7.120 ; 7.120 ; 7.120 ; 7.120 ;
+; operand_normalized_ieee_b[18] ; carry_of_fraction ; 7.124 ; 7.124 ; 7.124 ; 7.124 ;
+; operand_normalized_ieee_b[19] ; carry_of_fraction ; 7.011 ; 7.011 ; 7.011 ; 7.011 ;
+; operand_normalized_ieee_b[20] ; carry_of_fraction ; 6.875 ; 6.875 ; 6.875 ; 6.875 ;
+; operand_normalized_ieee_b[21] ; carry_of_fraction ; 6.527 ; 6.527 ; 6.527 ; 6.527 ;
+; operand_normalized_ieee_b[22] ; carry_of_fraction ; 6.608 ; 6.608 ; 6.608 ; 6.608 ;
+; operand_normalized_ieee_b[23] ; carry_of_fraction ; 6.572 ; 6.572 ; 6.572 ; 6.572 ;
+; operand_normalized_ieee_b[24] ; carry_of_fraction ; 6.899 ; 6.899 ; 6.899 ; 6.899 ;
+; operand_normalized_ieee_b[25] ; carry_of_fraction ; 6.518 ; 6.518 ; 6.518 ; 6.518 ;
+; operand_normalized_ieee_b[26] ; carry_of_fraction ; 6.583 ; 6.583 ; 6.583 ; 6.583 ;
+; operand_normalized_ieee_b[27] ; carry_of_fraction ; 6.698 ; 6.698 ; 6.698 ; 6.698 ;
+; operand_normalized_ieee_b[28] ; carry_of_fraction ; 6.698 ; 6.698 ; 6.698 ; 6.698 ;
+; operand_normalized_ieee_b[29] ; carry_of_fraction ; 6.375 ; 6.375 ; 6.375 ; 6.375 ;
+; operand_normalized_ieee_b[30] ; carry_of_fraction ; 6.524 ; 6.524 ; 6.524 ; 6.524 ;
+; operand_normalized_ieee_b[31] ; carry_of_fraction ; 4.199 ; 4.199 ; 4.199 ; 4.199 ;
++-------------------------------+-------------------+-------+-------+-------+-------+
+
+
++----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                        ;
++------------------+-------+------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+------+----------+---------+---------------------+
+; Worst-case Slack ; N/A   ; N/A  ; N/A      ; N/A     ; N/A                 ;
+; Design-wide TNS  ; 0.0   ; 0.0  ; 0.0      ; 0.0     ; 0.0                 ;
++------------------+-------+------+----------+---------+---------------------+
+
+
++---------------------------------------------------------------------------------------+
+; Progagation Delay                                                                     ;
++-------------------------------+-------------------+--------+--------+--------+--------+
+; Input Port                    ; Output Port       ; RR     ; RF     ; FR     ; FF     ;
++-------------------------------+-------------------+--------+--------+--------+--------+
+; operand_normalized_ieee_a[0]  ; carry_of_fraction ; 16.910 ; 16.910 ; 16.910 ; 16.910 ;
+; operand_normalized_ieee_a[1]  ; carry_of_fraction ; 17.909 ; 17.909 ; 17.909 ; 17.909 ;
+; operand_normalized_ieee_a[2]  ; carry_of_fraction ; 18.170 ; 18.170 ; 18.170 ; 18.170 ;
+; operand_normalized_ieee_a[3]  ; carry_of_fraction ; 18.981 ; 18.981 ; 18.981 ; 18.981 ;
+; operand_normalized_ieee_a[4]  ; carry_of_fraction ; 19.035 ; 19.035 ; 19.035 ; 19.035 ;
+; operand_normalized_ieee_a[5]  ; carry_of_fraction ; 18.826 ; 18.826 ; 18.826 ; 18.826 ;
+; operand_normalized_ieee_a[6]  ; carry_of_fraction ; 18.673 ; 18.673 ; 18.673 ; 18.673 ;
+; operand_normalized_ieee_a[7]  ; carry_of_fraction ; 18.768 ; 18.768 ; 18.768 ; 18.768 ;
+; operand_normalized_ieee_a[8]  ; carry_of_fraction ; 17.895 ; 17.895 ; 17.895 ; 17.895 ;
+; operand_normalized_ieee_a[9]  ; carry_of_fraction ; 18.170 ; 18.170 ; 18.170 ; 18.170 ;
+; operand_normalized_ieee_a[10] ; carry_of_fraction ; 19.253 ; 19.253 ; 19.253 ; 19.253 ;
+; operand_normalized_ieee_a[11] ; carry_of_fraction ; 18.811 ; 18.811 ; 18.811 ; 18.811 ;
+; operand_normalized_ieee_a[12] ; carry_of_fraction ; 19.439 ; 19.439 ; 19.439 ; 19.439 ;
+; operand_normalized_ieee_a[13] ; carry_of_fraction ; 19.230 ; 19.230 ; 19.230 ; 19.230 ;
+; operand_normalized_ieee_a[14] ; carry_of_fraction ; 18.811 ; 18.811 ; 18.811 ; 18.811 ;
+; operand_normalized_ieee_a[15] ; carry_of_fraction ; 19.010 ; 19.010 ; 19.010 ; 19.010 ;
+; operand_normalized_ieee_a[16] ; carry_of_fraction ; 18.395 ; 18.395 ; 18.395 ; 18.395 ;
+; operand_normalized_ieee_a[17] ; carry_of_fraction ; 18.485 ; 18.485 ; 18.485 ; 18.485 ;
+; operand_normalized_ieee_a[18] ; carry_of_fraction ; 18.499 ; 18.499 ; 18.499 ; 18.499 ;
+; operand_normalized_ieee_a[19] ; carry_of_fraction ; 18.466 ; 18.466 ; 18.466 ; 18.466 ;
+; operand_normalized_ieee_a[20] ; carry_of_fraction ; 18.790 ; 18.790 ; 18.790 ; 18.790 ;
+; operand_normalized_ieee_a[21] ; carry_of_fraction ; 18.767 ; 18.767 ; 18.767 ; 18.767 ;
+; operand_normalized_ieee_a[22] ; carry_of_fraction ; 18.275 ; 18.275 ; 18.275 ; 18.275 ;
+; operand_normalized_ieee_a[23] ; carry_of_fraction ; 23.281 ; 23.281 ; 23.281 ; 23.281 ;
+; operand_normalized_ieee_a[24] ; carry_of_fraction ; 23.140 ; 23.140 ; 23.140 ; 23.140 ;
+; operand_normalized_ieee_a[25] ; carry_of_fraction ; 23.381 ; 23.381 ; 23.381 ; 23.381 ;
+; operand_normalized_ieee_a[26] ; carry_of_fraction ; 23.186 ; 23.186 ; 23.186 ; 23.186 ;
+; operand_normalized_ieee_a[27] ; carry_of_fraction ; 23.010 ; 23.010 ; 23.010 ; 23.010 ;
+; operand_normalized_ieee_a[28] ; carry_of_fraction ; 23.188 ; 23.188 ; 23.188 ; 23.188 ;
+; operand_normalized_ieee_a[29] ; carry_of_fraction ; 22.983 ; 22.983 ; 22.983 ; 22.983 ;
+; operand_normalized_ieee_a[30] ; carry_of_fraction ; 21.909 ; 21.909 ; 21.909 ; 21.909 ;
+; operand_normalized_ieee_a[31] ; carry_of_fraction ; 13.758 ; 13.758 ; 13.758 ; 13.758 ;
+; operand_normalized_ieee_b[0]  ; carry_of_fraction ; 17.625 ; 17.625 ; 17.625 ; 17.625 ;
+; operand_normalized_ieee_b[1]  ; carry_of_fraction ; 17.372 ; 17.372 ; 17.372 ; 17.372 ;
+; operand_normalized_ieee_b[2]  ; carry_of_fraction ; 17.027 ; 17.027 ; 17.027 ; 17.027 ;
+; operand_normalized_ieee_b[3]  ; carry_of_fraction ; 17.969 ; 17.969 ; 17.969 ; 17.969 ;
+; operand_normalized_ieee_b[4]  ; carry_of_fraction ; 18.243 ; 18.243 ; 18.243 ; 18.243 ;
+; operand_normalized_ieee_b[5]  ; carry_of_fraction ; 17.901 ; 17.901 ; 17.901 ; 17.901 ;
+; operand_normalized_ieee_b[6]  ; carry_of_fraction ; 17.965 ; 17.965 ; 17.965 ; 17.965 ;
+; operand_normalized_ieee_b[7]  ; carry_of_fraction ; 19.618 ; 19.618 ; 19.618 ; 19.618 ;
+; operand_normalized_ieee_b[8]  ; carry_of_fraction ; 18.681 ; 18.681 ; 18.681 ; 18.681 ;
+; operand_normalized_ieee_b[9]  ; carry_of_fraction ; 18.518 ; 18.518 ; 18.518 ; 18.518 ;
+; operand_normalized_ieee_b[10] ; carry_of_fraction ; 18.828 ; 18.828 ; 18.828 ; 18.828 ;
+; operand_normalized_ieee_b[11] ; carry_of_fraction ; 18.934 ; 18.934 ; 18.934 ; 18.934 ;
+; operand_normalized_ieee_b[12] ; carry_of_fraction ; 18.629 ; 18.629 ; 18.629 ; 18.629 ;
+; operand_normalized_ieee_b[13] ; carry_of_fraction ; 19.099 ; 19.099 ; 19.099 ; 19.099 ;
+; operand_normalized_ieee_b[14] ; carry_of_fraction ; 18.495 ; 18.495 ; 18.495 ; 18.495 ;
+; operand_normalized_ieee_b[15] ; carry_of_fraction ; 19.705 ; 19.705 ; 19.705 ; 19.705 ;
+; operand_normalized_ieee_b[16] ; carry_of_fraction ; 19.643 ; 19.643 ; 19.643 ; 19.643 ;
+; operand_normalized_ieee_b[17] ; carry_of_fraction ; 19.455 ; 19.455 ; 19.455 ; 19.455 ;
+; operand_normalized_ieee_b[18] ; carry_of_fraction ; 19.332 ; 19.332 ; 19.332 ; 19.332 ;
+; operand_normalized_ieee_b[19] ; carry_of_fraction ; 19.012 ; 19.012 ; 19.012 ; 19.012 ;
+; operand_normalized_ieee_b[20] ; carry_of_fraction ; 18.437 ; 18.437 ; 18.437 ; 18.437 ;
+; operand_normalized_ieee_b[21] ; carry_of_fraction ; 18.443 ; 18.443 ; 18.443 ; 18.443 ;
+; operand_normalized_ieee_b[22] ; carry_of_fraction ; 19.591 ; 19.591 ; 19.591 ; 19.591 ;
+; operand_normalized_ieee_b[23] ; carry_of_fraction ; 22.747 ; 22.747 ; 22.747 ; 22.747 ;
+; operand_normalized_ieee_b[24] ; carry_of_fraction ; 23.299 ; 23.299 ; 23.299 ; 23.299 ;
+; operand_normalized_ieee_b[25] ; carry_of_fraction ; 22.602 ; 22.602 ; 22.602 ; 22.602 ;
+; operand_normalized_ieee_b[26] ; carry_of_fraction ; 22.764 ; 22.764 ; 22.764 ; 22.764 ;
+; operand_normalized_ieee_b[27] ; carry_of_fraction ; 22.984 ; 22.984 ; 22.984 ; 22.984 ;
+; operand_normalized_ieee_b[28] ; carry_of_fraction ; 22.958 ; 22.958 ; 22.958 ; 22.958 ;
+; operand_normalized_ieee_b[29] ; carry_of_fraction ; 22.349 ; 22.349 ; 22.349 ; 22.349 ;
+; operand_normalized_ieee_b[30] ; carry_of_fraction ; 22.497 ; 22.497 ; 22.497 ; 22.497 ;
+; operand_normalized_ieee_b[31] ; carry_of_fraction ; 15.179 ; 15.179 ; 15.179 ; 15.179 ;
++-------------------------------+-------------------+--------+--------+--------+--------+
+
+
++-----------------------------------------------------------------------------------+
+; Minimum Progagation Delay                                                         ;
++-------------------------------+-------------------+-------+-------+-------+-------+
+; Input Port                    ; Output Port       ; RR    ; RF    ; FR    ; FF    ;
++-------------------------------+-------------------+-------+-------+-------+-------+
+; operand_normalized_ieee_a[0]  ; carry_of_fraction ; 7.394 ; 7.394 ; 7.394 ; 7.394 ;
+; operand_normalized_ieee_a[1]  ; carry_of_fraction ; 7.774 ; 7.774 ; 7.774 ; 7.774 ;
+; operand_normalized_ieee_a[2]  ; carry_of_fraction ; 7.696 ; 7.696 ; 7.696 ; 7.696 ;
+; operand_normalized_ieee_a[3]  ; carry_of_fraction ; 7.490 ; 7.490 ; 7.490 ; 7.490 ;
+; operand_normalized_ieee_a[4]  ; carry_of_fraction ; 7.640 ; 7.640 ; 7.640 ; 7.640 ;
+; operand_normalized_ieee_a[5]  ; carry_of_fraction ; 7.520 ; 7.520 ; 7.520 ; 7.520 ;
+; operand_normalized_ieee_a[6]  ; carry_of_fraction ; 7.328 ; 7.328 ; 7.328 ; 7.328 ;
+; operand_normalized_ieee_a[7]  ; carry_of_fraction ; 7.471 ; 7.471 ; 7.471 ; 7.471 ;
+; operand_normalized_ieee_a[8]  ; carry_of_fraction ; 7.055 ; 7.055 ; 7.055 ; 7.055 ;
+; operand_normalized_ieee_a[9]  ; carry_of_fraction ; 7.000 ; 7.000 ; 7.000 ; 7.000 ;
+; operand_normalized_ieee_a[10] ; carry_of_fraction ; 7.535 ; 7.535 ; 7.535 ; 7.535 ;
+; operand_normalized_ieee_a[11] ; carry_of_fraction ; 6.926 ; 6.926 ; 6.926 ; 6.926 ;
+; operand_normalized_ieee_a[12] ; carry_of_fraction ; 7.560 ; 7.560 ; 7.560 ; 7.560 ;
+; operand_normalized_ieee_a[13] ; carry_of_fraction ; 7.288 ; 7.288 ; 7.288 ; 7.288 ;
+; operand_normalized_ieee_a[14] ; carry_of_fraction ; 7.202 ; 7.202 ; 7.202 ; 7.202 ;
+; operand_normalized_ieee_a[15] ; carry_of_fraction ; 7.126 ; 7.126 ; 7.126 ; 7.126 ;
+; operand_normalized_ieee_a[16] ; carry_of_fraction ; 6.846 ; 6.846 ; 6.846 ; 6.846 ;
+; operand_normalized_ieee_a[17] ; carry_of_fraction ; 6.808 ; 6.808 ; 6.808 ; 6.808 ;
+; operand_normalized_ieee_a[18] ; carry_of_fraction ; 6.967 ; 6.967 ; 6.967 ; 6.967 ;
+; operand_normalized_ieee_a[19] ; carry_of_fraction ; 6.730 ; 6.730 ; 6.730 ; 6.730 ;
+; operand_normalized_ieee_a[20] ; carry_of_fraction ; 7.035 ; 7.035 ; 7.035 ; 7.035 ;
+; operand_normalized_ieee_a[21] ; carry_of_fraction ; 6.829 ; 6.829 ; 6.829 ; 6.829 ;
+; operand_normalized_ieee_a[22] ; carry_of_fraction ; 6.810 ; 6.810 ; 6.810 ; 6.810 ;
+; operand_normalized_ieee_a[23] ; carry_of_fraction ; 6.865 ; 6.865 ; 6.865 ; 6.865 ;
+; operand_normalized_ieee_a[24] ; carry_of_fraction ; 6.765 ; 6.765 ; 6.765 ; 6.765 ;
+; operand_normalized_ieee_a[25] ; carry_of_fraction ; 6.942 ; 6.942 ; 6.942 ; 6.942 ;
+; operand_normalized_ieee_a[26] ; carry_of_fraction ; 6.830 ; 6.830 ; 6.830 ; 6.830 ;
+; operand_normalized_ieee_a[27] ; carry_of_fraction ; 6.701 ; 6.701 ; 6.701 ; 6.701 ;
+; operand_normalized_ieee_a[28] ; carry_of_fraction ; 6.871 ; 6.871 ; 6.871 ; 6.871 ;
+; operand_normalized_ieee_a[29] ; carry_of_fraction ; 6.737 ; 6.737 ; 6.737 ; 6.737 ;
+; operand_normalized_ieee_a[30] ; carry_of_fraction ; 6.237 ; 6.237 ; 6.237 ; 6.237 ;
+; operand_normalized_ieee_a[31] ; carry_of_fraction ; 3.942 ; 3.942 ; 3.942 ; 3.942 ;
+; operand_normalized_ieee_b[0]  ; carry_of_fraction ; 7.449 ; 7.449 ; 7.449 ; 7.449 ;
+; operand_normalized_ieee_b[1]  ; carry_of_fraction ; 7.494 ; 7.494 ; 7.494 ; 7.494 ;
+; operand_normalized_ieee_b[2]  ; carry_of_fraction ; 7.486 ; 7.486 ; 7.486 ; 7.486 ;
+; operand_normalized_ieee_b[3]  ; carry_of_fraction ; 7.527 ; 7.527 ; 7.527 ; 7.527 ;
+; operand_normalized_ieee_b[4]  ; carry_of_fraction ; 7.363 ; 7.363 ; 7.363 ; 7.363 ;
+; operand_normalized_ieee_b[5]  ; carry_of_fraction ; 7.469 ; 7.469 ; 7.469 ; 7.469 ;
+; operand_normalized_ieee_b[6]  ; carry_of_fraction ; 7.479 ; 7.479 ; 7.479 ; 7.479 ;
+; operand_normalized_ieee_b[7]  ; carry_of_fraction ; 7.451 ; 7.451 ; 7.451 ; 7.451 ;
+; operand_normalized_ieee_b[8]  ; carry_of_fraction ; 7.330 ; 7.330 ; 7.330 ; 7.330 ;
+; operand_normalized_ieee_b[9]  ; carry_of_fraction ; 6.972 ; 6.972 ; 6.972 ; 6.972 ;
+; operand_normalized_ieee_b[10] ; carry_of_fraction ; 7.133 ; 7.133 ; 7.133 ; 7.133 ;
+; operand_normalized_ieee_b[11] ; carry_of_fraction ; 7.411 ; 7.411 ; 7.411 ; 7.411 ;
+; operand_normalized_ieee_b[12] ; carry_of_fraction ; 6.976 ; 6.976 ; 6.976 ; 6.976 ;
+; operand_normalized_ieee_b[13] ; carry_of_fraction ; 6.911 ; 6.911 ; 6.911 ; 6.911 ;
+; operand_normalized_ieee_b[14] ; carry_of_fraction ; 6.862 ; 6.862 ; 6.862 ; 6.862 ;
+; operand_normalized_ieee_b[15] ; carry_of_fraction ; 7.062 ; 7.062 ; 7.062 ; 7.062 ;
+; operand_normalized_ieee_b[16] ; carry_of_fraction ; 7.433 ; 7.433 ; 7.433 ; 7.433 ;
+; operand_normalized_ieee_b[17] ; carry_of_fraction ; 7.120 ; 7.120 ; 7.120 ; 7.120 ;
+; operand_normalized_ieee_b[18] ; carry_of_fraction ; 7.124 ; 7.124 ; 7.124 ; 7.124 ;
+; operand_normalized_ieee_b[19] ; carry_of_fraction ; 7.011 ; 7.011 ; 7.011 ; 7.011 ;
+; operand_normalized_ieee_b[20] ; carry_of_fraction ; 6.875 ; 6.875 ; 6.875 ; 6.875 ;
+; operand_normalized_ieee_b[21] ; carry_of_fraction ; 6.527 ; 6.527 ; 6.527 ; 6.527 ;
+; operand_normalized_ieee_b[22] ; carry_of_fraction ; 6.608 ; 6.608 ; 6.608 ; 6.608 ;
+; operand_normalized_ieee_b[23] ; carry_of_fraction ; 6.572 ; 6.572 ; 6.572 ; 6.572 ;
+; operand_normalized_ieee_b[24] ; carry_of_fraction ; 6.899 ; 6.899 ; 6.899 ; 6.899 ;
+; operand_normalized_ieee_b[25] ; carry_of_fraction ; 6.518 ; 6.518 ; 6.518 ; 6.518 ;
+; operand_normalized_ieee_b[26] ; carry_of_fraction ; 6.583 ; 6.583 ; 6.583 ; 6.583 ;
+; operand_normalized_ieee_b[27] ; carry_of_fraction ; 6.698 ; 6.698 ; 6.698 ; 6.698 ;
+; operand_normalized_ieee_b[28] ; carry_of_fraction ; 6.698 ; 6.698 ; 6.698 ; 6.698 ;
+; operand_normalized_ieee_b[29] ; carry_of_fraction ; 6.375 ; 6.375 ; 6.375 ; 6.375 ;
+; operand_normalized_ieee_b[30] ; carry_of_fraction ; 6.524 ; 6.524 ; 6.524 ; 6.524 ;
+; operand_normalized_ieee_b[31] ; carry_of_fraction ; 4.199 ; 4.199 ; 4.199 ; 4.199 ;
++-------------------------------+-------------------+-------+-------+-------+-------+
+
+
+-------------------
+; Clock Transfers ;
+-------------------
+Nothing to report.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 64    ; 64   ;
+; Unconstrained Input Port Paths  ; 64    ; 64   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 64    ; 64   ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
+    Info: Processing started: Thu Apr 04 13:55:13 2019
+Info: Command: quartus_sta adder_floating_point -c adder_floating_point
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'adder_floating_point.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "Add4~14|datad"
+    Warning (332126): Node "Add4~14|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "Add4~12|dataa"
+    Warning (332126): Node "Add4~12|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "Add4~10|datab"
+    Warning (332126): Node "Add4~10|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "Add4~8|dataa"
+    Warning (332126): Node "Add4~8|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "Add4~6|datab"
+    Warning (332126): Node "Add4~6|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "Add4~4|dataa"
+    Warning (332126): Node "Add4~4|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "Add4~2|datab"
+    Warning (332126): Node "Add4~2|combout"
+Warning (332125): Found combinational loop of 2 nodes
+    Warning (332126): Node "final_sum[23]~8|combout"
+    Warning (332126): Node "final_sum[23]~8|datad"
+Warning (332068): No clocks defined in design.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info (332159): No clocks to report
+Info: Analyzing Slow Model
+Info (332140): No fmax paths to report
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332140): No Setup paths to report
+Info (332140): No Hold paths to report
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332140): No Minimum Pulse Width paths to report
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4574 megabytes
+    Info: Processing ended: Thu Apr 04 13:55:17 2019
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+

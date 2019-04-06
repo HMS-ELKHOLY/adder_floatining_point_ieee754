@@ -1,0 +1,33 @@
+# Reading E:/ALT12/modelsim_ase/tcl/vsim/pref.tcl 
+# ERROR: No extended dataflow license exists
+# do adder_floating_point_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying E:\ALT12\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied E:\ALT12\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+E:/adder_floating_point {E:/adder_floating_point/adder_floating_point.sv}
+# Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
+# -- Compiling module adder_floating_point
+# ** Warning: E:/adder_floating_point/adder_floating_point.sv(74): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# 
+# Top level modules:
+# 	adder_floating_point
+# 
+vsim work.adder_floating_point
+# vsim work.adder_floating_point 
+# Loading sv_std.std
+# Loading work.adder_floating_point
+force -freeze sim:/adder_floating_point/operand_normalized_ieee_a {111111111111} 0
+# Invalid binary digit: .
+# ** Error: (vsim-4011) Invalid force value: {111111111111} 0.
+# 
+force operand_normalized_ieee_a 1111111111111111
+force operand_normalized_ieee_b 1111111111111111
+run 110

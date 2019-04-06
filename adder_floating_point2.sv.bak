@@ -1,0 +1,108 @@
+/*
+created by : 
+AbdAlla Mohammad AboElMagd
+Hussien Mostafa Said ElKholy
+*/
+module adder_floating_point(
+input logic signed [31:0]  operand_normalized_ieee_a , operand_normalized_ieee_b ,//opreands must be enterd normalized
+output logic signed [31:0]  final_sum ,//result
+output logic carry_of_fraction,//when summing fraction_a and fraction_b the result is stored in sum and carry_of_fraction {carry_of_fraction,sum}=fraction_a+fraction_b
+output logic finish = 0 ,//flag of finish
+//flags
+output logic zero ,
+ overflow ,
+ underflow 
+ );
+ 	integer i =0;
+logic signed [24:0]  fraction_a , fraction_b ;//take 23 fraction in addition to implicit to not remove important bits when shifting 
+logic signed [24:0] sum ;//result of fraction_a (+or-) fraction_b
+logic [7:0] exponent_a , exponent_b , positive_difference , biggest_exponent;
+logic flip_EN;
+logic clk;//clock input for stage of carry_of_fraction=0
+logic implicit_state;
+logic [24:0] sum2;
+
+always @(operand_normalized_ieee_a,operand_normalized_ieee_b)
+	begin
+	
+	// first we fill the fraction and exponent of the two floating point
+		fraction_a [22:0] = operand_normalized_ieee_a [22:0] ;
+		fraction_a[23] = 1 ;
+		fraction_a[24] = operand_normalized_ieee_a[31] ;
+		exponent_a = operand_normalized_ieee_a [30:23] ;
+		
+		fraction_b [22:0] = operand_normalized_ieee_b [22:0] ;
+		fraction_b[23] = 1 ;
+		fraction_b[24] = operand_normalized_ieee_b[31] ;
+		exponent_b = operand_normalized_ieee_b [30:23] ;
+		
+	//second we compare the exponent of the two variables and get the positive difference between them
+	//then we shift right the operand which has the small exponent with the positive_difference  
+	if(exponent_a >= exponent_b)
+		begin
+			positive_difference = exponent_a - exponent_b;
+			fraction_a >>>= positive_difference ;
+			biggest_exponent = exponent_a ; 
+		end
+	else 
+		begin
+			positive_difference = exponent_b - exponent_a;
+			fraction_b>>>= positive_difference ;
+			biggest_exponent = exponent_b;
+			
+		end
+		
+		//then we simply add the fraction
+		{carry_of_fraction,sum} = fraction_a + fraction_b;// checck blue
+		
+		// then we check if carry_of_fraction = 1 we add 1 to
+		if (carry_of_fraction == 1 )
+		begin
+			biggest_exponent = biggest_exponent + 1 ;
+					end	
+		else 
+		begin
+			sum2[24]=sum[24]|sum[24];
+		
+			for(i=24; i>0; i=i-1)
+			sum2=sum[i-1]|sum2[i];
+	end		
+		sum2[0]=1;
+		end
+always@(biggest_exponent)	
+if (biggest_exponent == 0)
+			begin
+			underflow = 1 ; 
+			finish = 1 ;
+			end
+else if (biggest_exponent > 3'd254)
+			begin
+			overflow = 1 ;
+			finish = 1 ;
+			end
+//logic [24:0] sum_case_zero =sum;
+/*always_ff@(posedge clk,posedge flip_EN)		
+				
+					if (flip_EN)
+					begin
+					sum_case_zero=sum_case_zero<<<1;
+					biggest_exponent=biggest_exponent-1;
+					end
+*/
+/*						
+always@(sum_case_zero[24])
+case (sum_case_zero[24])
+0:
+begin
+flip_EN=1;
+finish=0;
+end
+1:
+begin
+finish=1;
+flip_EN=0;
+end
+endcase
+*/
+	
+endmodule
