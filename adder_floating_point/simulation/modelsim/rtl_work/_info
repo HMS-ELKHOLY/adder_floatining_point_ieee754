@@ -1,0 +1,28 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\adder_floating_point\simulation\modelsim
+vadder_floating_point
+DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+!s100 KfSS>cnB>PGWaWeP`f24R3
+I:O:ZDR<[2BUDLe5:IifXn1
+V=eAf7BQ9ZgPZfEmhUQog22
+!s105 adder_floating_point_sv_unit
+S1
+Z1 dE:\adder_floating_point\simulation\modelsim
+w1554378180
+8E:/adder_floating_point/adder_floating_point.sv
+FE:/adder_floating_point/adder_floating_point.sv
+L0 6
+Z2 OV;L;10.1b;51
+r1
+!s85 0
+31
+!s108 1554378944.978000
+!s107 E:/adder_floating_point/adder_floating_point.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/adder_floating_point|E:/adder_floating_point/adder_floating_point.sv|
+!s101 -O0
+o-sv -work work -O0
+!s92 -sv -work work +incdir+E:/adder_floating_point -O0
