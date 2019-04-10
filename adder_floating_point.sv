@@ -69,7 +69,7 @@ always @(operand_normalized_ieee_a,operand_normalized_ieee_b)
         begin
           if(sum[23]==0)
           begin
-            sum<=sum<<<1;
+            sum=sum<<<1;
             biggest_exponent=biggest_exponent-1;
           end
         end
@@ -96,6 +96,5 @@ finish=1;
 end
 */
 end
-
 endmodule
 
