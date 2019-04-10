@@ -37,9 +37,9 @@ always @(operand_normalized_ieee_a,operand_normalized_ieee_b)
 	//second we compare the exponent of the two variables and get the positive difference between them
 	//then we shift right the operand which has the small exponent with the positive_difference  
 	if(exponent_a >= exponent_b)
-		begin
+		begin	
 			positive_difference = exponent_a - exponent_b;
-			fraction_a >>>= positive_difference ;
+			fraction_b >>>= positive_difference ;//fixed fraction_b instead of fraction_b
 			biggest_exponent = exponent_a ; 
 			
 	//	{carry_of_fraction,sum} <= fraction_a + fraction_b;// checck blue
@@ -47,37 +47,38 @@ always @(operand_normalized_ieee_a,operand_normalized_ieee_b)
 	else 
 		begin
 			positive_difference = exponent_b - exponent_a;
-			fraction_b>>>= positive_difference ;
+			fraction_a>>>= positive_difference ;//fixed fraction_a instead of fraction_b
 			biggest_exponent = exponent_b;
 			
 		
 		end
 
 		//then we simply add the fraction
-		{carry_of_fraction,sum} <= fraction_a + fraction_b;// checck blue	
+		sum = fraction_a + fraction_b;// checck blue	
 		
 		// then we check if carry_of_fraction = 1 we add 1 to
-		if (carry_of_fraction == 1 )
+		if (sum[24] == 1 )
 		begin
 			biggest_exponent= biggest_exponent + 1 ;
+			sum=sum>>1;
 					end	
 		else 
-			begin
+			/*begin
 //shift the biggest exponent to  normalize the final sum
 //logic [24:0] sum_case_zero =sum[24:0];
         for(i =0 ; i<=23;i=i+1)	
         begin
-          if(sum[23]==0)
+          if(sum[24]==0)
           begin
-            sum=sum<<<1;
+            sum=sum<<1;
             biggest_exponent=biggest_exponent-1;
           end
         end
-      end
-final_sum[31]=sum[24];
+      end*/
+//final_sum[31]=sum[24];
 final_sum[30:23]=biggest_exponent;
 final_sum[22:0]=sum[22:0];
-
+$display("%b %b",sum,final_sum);
 // chck for under and over flow
 if (biggest_exponent == 0)
 			begin

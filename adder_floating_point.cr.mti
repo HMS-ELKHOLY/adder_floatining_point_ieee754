@@ -1,8 +1,8 @@
-E:/adder_floating_point/adder_floating_point.sv {1 {vlog -work work -sv {E:\adder_floating_point\adder_floating_point.sv}
+E:/adder_floating_point/add.sv {1 {vlog -work work -sv E:/adder_floating_point/add.sv
 Model Technology ModelSim ALTERA vlog 10.1b Compiler 2012.04 Apr 27 2012
--- Compiling module adder_floating_point
+-- Compiling module add
 
 Top level modules:
-	adder_floating_point
+	add
 
 } {} {}}
