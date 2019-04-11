@@ -27,19 +27,19 @@ always @(operand_normalized_ieee_a,operand_normalized_ieee_b)
 	// first we fill the fraction and exponent of the two floating point
 		fraction_a [22:0] = operand_normalized_ieee_a [22:0] ;
 		fraction_a[23] = 1 ;
-		fraction_a[24] = operand_normalized_ieee_a[31] ;
+		fraction_a[24] = 0 ;
 		exponent_a = operand_normalized_ieee_a [30:23] ;
 		
 		fraction_b [22:0] = operand_normalized_ieee_b [22:0] ;
 		fraction_b[23] = 1 ;
-		fraction_b[24] = operand_normalized_ieee_b[31] ;
+		fraction_b[24] = 0 ;
 		exponent_b = operand_normalized_ieee_b [30:23] ;
 	//second we compare the exponent of the two variables and get the positive difference between them
 	//then we shift right the operand which has the small exponent with the positive_difference  
 	if(exponent_a >= exponent_b)
 		begin	
 			positive_difference = exponent_a - exponent_b;
-			fraction_b >>>= positive_difference ;//fixed fraction_b instead of fraction_b
+			fraction_b >>>= positive_difference ;
 			biggest_exponent = exponent_a ; 
 			
 	//	{carry_of_fraction,sum} <= fraction_a + fraction_b;// checck blue
@@ -47,35 +47,65 @@ always @(operand_normalized_ieee_a,operand_normalized_ieee_b)
 	else 
 		begin
 			positive_difference = exponent_b - exponent_a;
-			fraction_a>>>= positive_difference ;//fixed fraction_a instead of fraction_b
+			fraction_a>>>= positive_difference ;
 			biggest_exponent = exponent_b;
 			
 		
 		end
-
+if(operand_normalized_ieee_a[31]==operand_normalized_ieee_b[31])
+begin
 		//then we simply add the fraction
+
 		sum = fraction_a + fraction_b;// checck blue	
-		
+		final_sum[31]=operand_normalized_ieee_a[31];
 		// then we check if carry_of_fraction = 1 we add 1 to
 		if (sum[24] == 1 )
 		begin
 			biggest_exponent= biggest_exponent + 1 ;
 			sum=sum>>1;
-					end	
-		else 
-			/*begin
+end					
+end
+else
+if (exponent_a > exponent_b)
+begin
+			sum = fraction_a - fraction_b;// checck blue	
+      final_sum[31]=operand_normalized_ieee_a[31];
+end
+else if (exponent_a < exponent_b)
+  begin
+    
+		sum = fraction_b - fraction_a;// checck blue	
+final_sum[31]=operand_normalized_ieee_b[31];
+end
+else if (fraction_a>=fraction_b)
+  begin
+    
+		sum=fraction_a - fraction_b;
+    final_sum[31]=operand_normalized_ieee_a[31];
+end
+else
+  begin
+		sum=fraction_b - fraction_a;
+	final_sum[31]=operand_normalized_ieee_b[31];
+	end
+	
 //shift the biggest exponent to  normalize the final sum
 //logic [24:0] sum_case_zero =sum[24:0];
+        if (sum[23]==0)
         for(i =0 ; i<=23;i=i+1)	
         begin
-          if(sum[24]==0)
+          if(sum[23]==0)
           begin
             sum=sum<<1;
             biggest_exponent=biggest_exponent-1;
           end
         end
-      end*/
-//final_sum[31]=sum[24];
+ if (sum[24] == 1 )
+		begin
+			biggest_exponent= biggest_exponent + 1 ;
+			sum=sum>>1;
+			end     
+//final_sum[31]=operand_normalized_ieee_a[31]&operand_normalized_ieee_b[31];
 final_sum[30:23]=biggest_exponent;
 final_sum[22:0]=sum[22:0];
 $display("%b %b",sum,final_sum);
@@ -89,6 +119,7 @@ else if (biggest_exponent > 8'd254)
 			overflow = 1 ;
 			end
 finish = 1 ;
+
 /*
 overflow<=(biggest_exponent>=8'b11111111);
 
