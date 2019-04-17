@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at adder_floating_point.sv(24): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at adder_floating_point.sv(52): always construct contains both blocking and non-blocking assignments
