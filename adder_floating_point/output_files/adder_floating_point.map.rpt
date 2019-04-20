@@ -1,6 +1,6 @@
 Analysis & Synthesis report for adder_floating_point
-Thu Apr 04 14:02:27 2019
-Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
+Wed Apr 17 19:09:04 2019
+Quartus II 32-bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
 
 
 ---------------------
@@ -10,7 +10,14 @@ Quartus II 64-Bit Version 12.1 Build 177 11/07/2012 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
+ 12. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -36,20 +43,20 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +------------------------------------+------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Thu Apr 04 14:02:27 2019        ;
-; Quartus II 64-Bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 17 19:09:04 2019    ;
+; Quartus II 32-bit Version          ; 12.1 Build 177 11/07/2012 SJ Web Edition ;
 ; Revision Name                      ; adder_floating_point                     ;
 ; Top-level Entity Name              ; adder_floating_point                     ;
 ; Family                             ; Cyclone II                               ;
-; Total logic elements               ; N/A until Partition Merge                ;
-;     Total combinational functions  ; N/A until Partition Merge                ;
-;     Dedicated logic registers      ; N/A until Partition Merge                ;
-; Total registers                    ; N/A until Partition Merge                ;
-; Total pins                         ; N/A until Partition Merge                ;
-; Total virtual pins                 ; N/A until Partition Merge                ;
-; Total memory bits                  ; N/A until Partition Merge                ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                ;
-; Total PLLs                         ; N/A until Partition Merge                ;
+; Total logic elements               ; 1,508                                    ;
+;     Total combinational functions  ; 1,508                                    ;
+;     Dedicated logic registers      ; 0                                        ;
+; Total registers                    ; 0                                        ;
+; Total pins                         ; 101                                      ;
+; Total virtual pins                 ; 0                                        ;
+; Total memory bits                  ; 0                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                        ;
+; Total PLLs                         ; 0                                        ;
 +------------------------------------+------------------------------------------+
 
 
@@ -149,21 +156,167 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+; adder_floating_point.sv          ; yes             ; User SystemVerilog HDL File  ; E:/FPU_ADDER/adder_floating_point - Copy/adder_floating_point.sv ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 1,508 ;
+;                                             ;       ;
+; Total combinational functions               ; 1508  ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 846   ;
+;     -- 3 input functions                    ; 587   ;
+;     -- <=2 input functions                  ; 75    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 1203  ;
+;     -- arithmetic mode                      ; 305   ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+;     -- Dedicated logic registers            ; 0     ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 101   ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out                             ; 107   ;
+; Total fan-out                               ; 5320  ;
+; Average fan-out                             ; 3.31  ;
++---------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                           ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
+; |adder_floating_point      ; 1508 (1508)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 101  ; 0            ; |adder_floating_point ;              ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |adder_floating_point|sum              ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |adder_floating_point|fraction_b[22]   ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |adder_floating_point|fraction_a[18]   ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |adder_floating_point|biggest_exponent ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |adder_floating_point|fraction_b[9]    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; No         ; |adder_floating_point|fraction_a[11]   ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |adder_floating_point|fraction_b[5]    ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |adder_floating_point|fraction_a[7]    ;
+; 6:1                ; 23 bits   ; 92 LEs        ; 46 LEs               ; 46 LEs                 ; No         ; |adder_floating_point|sum              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |adder_floating_point|fraction_b[3]    ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |adder_floating_point|fraction_a[3]    ;
+; 7:1                ; 29 bits   ; 116 LEs       ; 116 LEs              ; 0 LEs                  ; No         ; |adder_floating_point|final_sum        ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |adder_floating_point|fraction_b[0]    ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |adder_floating_point|fraction_a[1]    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:07     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus II 64-Bit Analysis & Synthesis
+Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 12.1 Build 177 11/07/2012 SJ Web Edition
-    Info: Processing started: Thu Apr 04 14:02:23 2019
+    Info: Processing started: Wed Apr 17 19:08:44 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off adder_floating_point -c adder_floating_point
 Warning (20028): Parallel compilation is not licensed and has been disabled
-Error (10170): Verilog HDL syntax error at adder_floating_point.sv(91) near text "endmodule";  expecting "end" File: E:/adder_floating_point/adder_floating_point.sv Line: 91
-Info (12021): Found 0 design units, including 0 entities, in source file adder_floating_point.sv
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 1 error, 1 warning
-    Error: Peak virtual memory: 4615 megabytes
-    Error: Processing ended: Thu Apr 04 14:02:27 2019
-    Error: Elapsed time: 00:00:04
-    Error: Total CPU time (on all processors): 00:00:04
+Info (12021): Found 1 design units, including 1 entities, in source file adder_floating_point.sv
+    Info (12023): Found entity 1: adder_floating_point
+Info (12127): Elaborating entity "adder_floating_point" for the top level hierarchy
+Warning (10230): Verilog HDL assignment warning at adder_floating_point.sv(98): truncated value with size 25 to match size of target (23)
+Warning (10230): Verilog HDL assignment warning at adder_floating_point.sv(122): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at adder_floating_point.sv(159): truncated value with size 32 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at adder_floating_point.sv(164): truncated value with size 32 to match size of target (8)
+Warning (10240): Verilog HDL Always Construct warning at adder_floating_point.sv(52): inferring latch(es) for variable "sum", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at adder_floating_point.sv(52): inferring latch(es) for variable "i", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at adder_floating_point.sv(52): inferring latch(es) for variable "underflow", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at adder_floating_point.sv(52): inferring latch(es) for variable "overflow", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "overflow" at adder_floating_point.sv(177)
+Info (10041): Inferred latch for "underflow" at adder_floating_point.sv(177)
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "finish" is stuck at VCC
+    Warning (13410): Pin "overflow" is stuck at VCC
+    Warning (13410): Pin "underflow" is stuck at VCC
+Info (144001): Generated suppressed messages file E:/FPU_ADDER/adder_floating_point - Copy/output_files/adder_floating_point.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1609 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 65 input pins
+    Info (21059): Implemented 36 output pins
+    Info (21061): Implemented 1508 logic cells
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 13 warnings
+    Info: Peak virtual memory: 389 megabytes
+    Info: Processing ended: Wed Apr 17 19:09:04 2019
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:13
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in E:/FPU_ADDER/adder_floating_point - Copy/output_files/adder_floating_point.map.smsg.
 
 
