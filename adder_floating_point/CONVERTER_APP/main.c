@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 //#include <cmath>
+
+
+
+
 // need to be edited to be simpler
 //need to use functions
 /*
@@ -11,6 +15,12 @@ Team Members:
     AbdAlla Mohammad AboElMagd Ali Mohammad ElBasiony
     Mahmoud hassan Mahmmad
 */
+
+
+
+//Author :hussien mostafa
+
+
 
 
 //contains the same binary data
