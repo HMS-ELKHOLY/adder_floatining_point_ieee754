@@ -42,7 +42,8 @@ output logic zero ,
  underflow =0,
  input logic op//selector for adding operand a + or - operand b
  );
- 	integer i =0;
+integer i =0;
+logic carrynan;
 logic signed [24:0]  fraction_a=0 , fraction_b=0 ;//take 23 fraction in addition to implicit to not remove important bits when shifting 
 logic signed [24:0] sum=0 ;//result of fraction_a (+or-) fraction_b
 logic [7:0] exponent_a=0 , exponent_b=0 , positive_difference=0 , biggest_exponent=0;
@@ -87,7 +88,10 @@ always @(operand_normalized_ieee_a,operand_normalized_ieee_b,op)
 			
 		//if only operand_normalized_ieee_b is inf	or NAN
 		else if (&exponent_b & ~&exponent_a)
-			final_sum = operand_normalized_ieee_b ;
+			begin	
+			final_sum[30:0] = operand_normalized_ieee_b[30:0] ;
+			final_sum[31] = signB ;
+			end
 		//if operand_normalized_ieee_a and operand_normalized_ieee_b are inf or NAN	
 		else if (&exponent_a & &exponent_b )
 			begin
@@ -95,12 +99,18 @@ always @(operand_normalized_ieee_a,operand_normalized_ieee_b,op)
 							final_sum = 32'b01111111100000000000000000000001 ;
 						else 
 							begin
-								final_sum[22:0] = fraction_a + fraction_b ;
+								{carrynan,final_sum[22:0]} = fraction_a + fraction_b ;
 								final_sum[31] = operand_normalized_ieee_a[31];
 								final_sum [30:23] = biggest_exponent ;
+								if(carrynan)
+									final_sum = 32'b01111111100000000000000000000001 ;
+						
 							end
 			end
 
+		//if the two operands are zero	
+		else if ((operand_normalized_ieee_a==0)&(operand_normalized_ieee_b==0))
+						final_sum = 32'b0;
 		//if the two operant are equals but not the same sign and not inf or NNA
 		else if ((~&exponent_a & ~&exponent_b) & (operand_normalized_ieee_a[22:0] == operand_normalized_ieee_b[22:0]) & (operand_normalized_ieee_a[31] != signB) & (exponent_a == exponent_b) )
 						final_sum = 32'b0;
