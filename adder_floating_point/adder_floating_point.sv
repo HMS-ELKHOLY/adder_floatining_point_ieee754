@@ -52,10 +52,15 @@ logic [7:0] exponent_a=0 , exponent_b=0 , positive_difference=0 , biggest_expone
 //logic implicit_state;
 logic signB;
 
-always @(posedge clk)
-	begin
+	always @(posedge clk)
+		begin
 		finish = 0;
-	end
+		end
+
+	always@(negedge clk)
+		begin
+		finish = 1;
+		end
 
 always @(operand_normalized_ieee_a,operand_normalized_ieee_b,op)
 	begin
@@ -207,7 +212,7 @@ else if (biggest_exponent > 8'd254)
 			end
 //$display("\n RESULT %b %b\n",sum,final_sum);
 
-finish =#50 1;
+
 zero <= (~|final_sum);
 end
 endmodule
