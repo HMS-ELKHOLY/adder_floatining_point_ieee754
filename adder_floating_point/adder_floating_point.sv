@@ -31,17 +31,18 @@ created by :
 
 
 
-module adder_floating_point(
-input logic signed [31:0]  operand_normalized_ieee_a , operand_normalized_ieee_b ,//opreands must be enterd normalized
-output logic signed [31:0]  final_sum ,//result
-output logic finish = 0 ,//flag of finish
-//flags
-output logic zero ,
- overflow =0,
-
- underflow =0,
- input logic op//selector for adding operand a + or - operand b
- );
+module adder_floating_point(input logic clk,
+							input logic signed [31:0]  operand_normalized_ieee_a , operand_normalized_ieee_b ,//opreands must be enterd normalized
+							output logic signed [31:0]  final_sum ,//result
+							output logic finish = 0 ,//flag of finish
+							//flags
+							output logic zero ,
+							overflow =0,
+							underflow =0,
+							
+							input logic op//selector for adding operand a + or - operand b
+							);
+							
 integer i =0;
 logic carrynan;
 logic signed [24:0]  fraction_a=0 , fraction_b=0 ;//take 23 fraction in addition to implicit to not remove important bits when shifting 
@@ -50,6 +51,12 @@ logic [7:0] exponent_a=0 , exponent_b=0 , positive_difference=0 , biggest_expone
 //logic flip_EN;
 //logic implicit_state;
 logic signB;
+
+always @(posedge clk)
+	begin
+		finish = 0;
+	end
+
 always @(operand_normalized_ieee_a,operand_normalized_ieee_b,op)
 	begin
 	signB=op^operand_normalized_ieee_b[31];
@@ -198,10 +205,9 @@ else if (biggest_exponent > 8'd254)
 			begin
 			overflow = 1 ;
 			end
-finish = 1 ;
 //$display("\n RESULT %b %b\n",sum,final_sum);
 
-
+finish =#50 1;
 zero <= (~|final_sum);
 end
 endmodule
