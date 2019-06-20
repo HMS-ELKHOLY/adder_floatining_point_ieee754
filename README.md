@@ -3,4 +3,4 @@
 ### part of Floating Point Unit Project for Computer Archticure Course
 used: 
 - verilog as HDL
-- for generating cases for testing
+- C for generating cases for testing
